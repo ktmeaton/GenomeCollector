@@ -7,6 +7,7 @@
 
 OLDVER=$1
 NEWVER=$2
+MODE=$3
 
 FILELIST="setup.py
 	  ncbimeta/NCBImeta
@@ -18,5 +19,7 @@ FILELIST="setup.py
 for file in `ls $FILELIST`;
 do
     echo "Updating $file from $OLDVER to $NEWVER";
-    sed -i "s/$OLDVER/$NEWVER/g" $file;
+	if [[ $MODE == "sync" ]]; then
+		sed -i "s/$OLDVER/$NEWVER/g" $file;
+	fi;
 done
