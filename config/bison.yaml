@@ -1,0 +1,178 @@
+# User Configuration Variables
+OUTPUT_DIR : bison
+EMAIL : ktmeaton@gmail.com
+API_KEY : b2174fc1bf4bb642a599e0cb239005a08b08
+FORCE_PAUSE_SECONDS : 0
+DATABASE : bison_db.sqlite
+
+# NCBI Tables to Query
+TABLES :
+  - Nucleotide
+
+# Query Terms to Use
+SEARCH_TERMS :
+  - Nucleotide: "NC020619
+      NC020620
+      KX592174
+      MF134653
+      KX592180
+      KX269134
+      KX269142
+      MN049911
+      KX269130
+      GQ464279
+      JQ846020
+      NC006380
+      KX269127
+      KX269140
+      KX269135
+      MN049908
+      KX898020
+      MN049906
+      KX269133
+      KR350472
+      KX269129
+      KX269128
+      KX269131
+      MN049913
+      MN049910
+      KX269117
+      KX898010
+      MN049912
+      KX269115
+      KX269119
+      KX269110
+      KX269132
+      MN049909
+      KX269139
+      KX269125
+      KX269137
+      KX269136
+      KX451364
+      KX451359
+      KX269143
+      JN632601
+      KX451356
+      KX269120
+      GU946988
+      GU946994
+      GU946990
+      GU946991
+      GU947000
+      KX451357
+      KX451353
+      GU947004
+      GU946976
+      GU946977
+      GU946978
+      GU946981
+      GU946983
+      GU946984
+      GU946986
+      GU946993
+      GU946995
+      GU946996
+      GU947001
+      KX451363
+      KX451366
+      EU177871
+      NC012346
+      GU946979
+      GU946992
+      GU946998
+      KX451365
+      KX451362
+      GU946987
+      GU946982
+      GU946989
+      GU946997
+      GU947006
+      KX269121
+      KX451358
+      KX451355
+      KX451361
+      GU947005
+      KX451367
+      GU946985
+      GU946980
+      GU947003
+      GU946999
+      GU947002
+      KX451360
+      KX451352
+      KX451354
+      KX269123
+      KX269124
+      KX269144
+      KX269118
+      KX269145
+      KX269126
+      KM593920
+      NC027233
+      KX269109
+      KX269114
+      KX898018
+      KX269113
+      MN049907
+      KX269141
+      KX269116
+      KX269111
+      KX269138
+      MN049905
+      KX898019
+      KX269112
+      KX898014
+      KF525852
+      NC005971
+      MF169211
+      MF169212
+      NC013996
+      KF163091
+      KF163089
+      EU177823
+      AY676858
+      KX592177
+      KX592179
+      KX592181
+      KX592184
+      KX592189
+      KX592185
+      KX592188
+      KX592186
+      KX592187
+      KU886087
+      NC033873
+      KX898007
+      KX553932
+      KX553934
+      KX592176
+      KX773459
+      KX553930
+      KX553931
+      KX592175
+      KX898017"
+
+# Columns of the database (ie. metadata fields to retrieve)
+TABLE_COLUMNS :
+
+  - Nucleotide :
+    - NucleotideAccession : GBSeq_primary-accession
+    - NucleotideAccessionVersion : GBSeq_accession-version
+    - NucleotideCountry: XPATH, //GBQualifier[GBQualifier_name/text() = 'country']/GBQualifier_value
+    - NucleotideLatLon: XPATH, //GBQualifier[GBQualifier_name/text() = 'lat_lon']/GBQualifier_value
+    - NucleotideTissueType: XPATH, //GBQualifier[GBQualifier_name/text() = 'tissue_type']/GBQualifier_value
+    - NucleotideIsolate: XPATH, //GBQualifier[GBQualifier_name/text() = 'isolate']/GBQualifier_value
+    - NucleotideSpecimenVoucher: XPATH, //GBQualifier[GBQualifier_name/text() = 'specimen_voucher']/GBQualifier_value
+    - NucleotideBioProjectAccession : GBSeq_project
+    - NucleotideOrganism : GBSeq_organism
+    - NucleotideTaxonomy : GBSeq_taxonomy
+    - NucleotideDefinition : GBSeq_definition
+    - NucleotideReferenceJournal: GBSeq_references, GBReference_journal
+    - NucleotideReferenceTitle : GBSeq_references, GBReference_title
+    - NucleotideReferenceAuthors : GBSeq_references, GBReference_authors, GBAuthor
+    - NucleotideLength : GBSeq_length
+    - NucleotideSource : GBSeq_source
+    - NucleotideCreateDate : GBSeq_create-date
+    - NucleotideUpdateDate : GBSeq_update-date
+    - NucleotideGenBankComment : GBSeq_comment
+    - NucleotideComment : NullValue
