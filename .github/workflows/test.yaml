@@ -5,8 +5,7 @@ name: Test
 on:
   push:
     branches:
-      - 'master'
-      - 'dev'
+      - '*'
     paths:
       - '.github/workflows/test.yaml*'
       - 'example/*'
