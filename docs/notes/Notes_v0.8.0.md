@@ -1,4 +1,4 @@
-# Development
+# v0.8.0
 
 1. Start new dev branch for v0.7.1.
 1. Update miniconda actions and use mamba.
